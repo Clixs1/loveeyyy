@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Liter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(bg.avif);
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+}
+
+.paper {
+    padding: 100px;
+    position: absolute;
+    box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+}
+
+#a, #b, #c, #d, #e {
+    width: 160px;
+    padding: 8px 8px 25px;
+    background: white;
+    box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Allura', cursive;
+    margin: 10px;
+}
+
+#a { transform: rotate(-10deg); }
+#b { transform: rotate(-8deg); }
+#c { transform: rotate(10deg); }
+#d { transform: rotate(-14deg); }
+#e { transform: rotate(-9deg); }
+
+#a img, #b img, #c img, #d img, #e img {
+    width: 100%;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+#f {
+    background-image: url(divbg.jpg);
+    background-size: 800px;
+    padding: 40px 60px;
+    border-radius: 10px;
+    transform: rotate(-13deg);
+}
+
+#f p {
+    font-size: 3em;
+}
+
+.fa-heart {
+    font-size: 10rem;
+    color: #E31B23;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fa-heart:hover {
+    color: red;
+}
+
+#love-letter {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 10px;
+    font-family: 'Allura', cursive;
+    font-size: 1.5em;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#love-letter .fa-arrow-right-from-bracket {
+    margin-left: 14.5em;
+}
+
+.play-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Allura', cursive;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease;
+    pointer-events: auto;
+    position: relative; /* Helps stacking context */
+    z-index: 2; /* Higher than paper if needed */
+}
+.play-btn:hover {
+    transform: scale(1.1);
+    color: #555;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(bg.avif);
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+}
+    .paper {
+        padding: 30px;
+    }
+
+    #a, #b, #c, #d, #e {
+        width: 120px;
+        margin: 5px;
+        padding: 6px 6px 20px;
+    }
+
+    #f {
+        background-size: 100%;
+        padding: 20px 25px;
+    }
+
+    #f p {
+        font-size: 2em;
+    }
+
+    .fa-heart {
+        font-size: 6rem;
+    }
+
+    #love-letter {
+        font-size: 1.2em;
+        padding: 15px;
+        margin-left: 3em;
+        margin-right: 4em;
+    }
+}
+
+/* Tablet (min-width: 601px and max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .paper {
+        padding: 60px;
+    }
+
+    #a, #b, #c, #d, #e {
+        width: 140px;
+        margin: 8px;
+    }
+
+    #f {
+        background-size: 600px;
+        padding: 30px 40px;
+    }
+
+    #f p {
+        font-size: 2.5em;
+    }
+
+    .fa-heart {
+        font-size: 8rem;
+    }
+
+    #love-letter {
+        font-size: 1.2em;
+        padding: 15px;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+}
+
+/* Desktop (min-width: 901px) */
+@media (min-width: 901px) {
+    /* Already handled by default styles */
+}
